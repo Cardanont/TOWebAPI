@@ -1,7 +1,12 @@
-<h1>{{title}}</h1>
 
-<div class="row">
-  <div *ngFor="let company of companies" class="col-4">
-    <app-company-card [company]="company" ></app-company-card>>
+
+<div class="outbox col-12">
+  <div class="title">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="row col-12">
+    <div *ngFor="let company of companies" class="col-4">
+      <app-company-card [company]="company" ></app-company-card>
+    </div>
   </div>
 </div>
