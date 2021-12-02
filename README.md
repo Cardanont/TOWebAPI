@@ -1,2 +1,2 @@
 # TOWebAPI
-Basic .Net 6 Web API and an Angular project
+Basic .Net 6 Web API with an Angular 12 project
