@@ -16,9 +16,13 @@ namespace TureOmniWebAPI
             var filtered = companyData.Select(c => new { c.ListingID, c.Company, c.Image_List, c.CategoryID })
                 .Distinct().Select(x => new CompanyData { ListingID = x.ListingID, Company = x.Company, Image_List = x.Image_List, CategoryID = x.CategoryID });
 
-            List<CompanyData> filteredList = filtered.ToList();
+            List<CompanyData> filteredCompanies = filtered.ToList();
+            List<CompanyData> clonedCompanies = new List<CompanyData>(filteredCompanies);
 
-            return filteredList;
+            filteredCompanies.AddRange(clonedCompanies);
+
+
+            return filteredCompanies;
         }
 
         public string GetHttp(string url)
