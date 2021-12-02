@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'The True Omni app';
+  title = 'True Omni quick assessment test';
   companies: any;
 
   constructor(private http: HttpClient) {}
