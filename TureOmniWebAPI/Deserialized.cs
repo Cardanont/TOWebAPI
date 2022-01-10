@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Net;
 using TureOmniWebAPI.Models;
 
@@ -23,6 +24,11 @@ namespace TureOmniWebAPI
 
 
             return filteredCompanies;
+        }
+
+        public async Task<ActionResult> DeserializeAsync()
+        {
+
         }
 
         public string GetHttp(string url)
